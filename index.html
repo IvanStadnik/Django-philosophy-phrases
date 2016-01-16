@@ -1,37 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Django-philosophy-phrases : Philosophy phrases for django project (django version 1.8 or higher)">
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/github-dark.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <title>Django-philosophy-phrases</title>
+  <meta name="description" content="Philosophy phrases for django project (django version 1.8 or higher)">
 
-    <title>Django-philosophy-phrases</title>
-  </head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <body>
+</head>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/IvanStadnik/Django-philosophy-phrases">View on GitHub</a>
+<body>
 
-          <h1 id="project_title">Django-philosophy-phrases</h1>
-          <h2 id="project_tagline">Philosophy phrases for django project (django version 1.8 or higher)</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/IvanStadnik/Django-philosophy-phrases/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/IvanStadnik/Django-philosophy-phrases/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Django-philosophy-phrases</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Philosophy phrases for django project (django version 1.8 or higher)</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/IvanStadnik/Django-philosophy-phrases/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/IvanStadnik/Django-philosophy-phrases/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/IvanStadnik/Django-philosophy-phrases" class="code">View Django-philosophy-phrases on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h3>
 <a id="django-philosophy-phrases" class="anchor" href="#django-philosophy-phrases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Django-philosophy-phrases.</h3>
 
 <p>Django-philosophy-phrases is an application for django project on three languages ( English, Ukrainian and Russian ). Using it you can add any philosophy phrases on your website. It has default phrases which you can simply import from admin part. And then you have to add variable to your view function and insert it into your template. You can add just phrase and its author, or popup. In phrase settings in your admin part you can choose background color of popup, color of phrases text and  color of authors text. Also you have to choose language of phrases. If you choose 'auto', app will be detecting language using <a href="https://docs.djangoproject.com/en/1.9/topics/i18n/translation/#how-django-discovers-language-preference">django</a></p>
@@ -43,15 +48,18 @@
 <li>
 <p>Add "philosophy_phrases" to your INSTALLED_APPS setting like this:</p>
 
-<div class="highlight highlight-source-python"><pre>INSTALLED_APPS <span class="pl-k">=</span> (
-    ...
+<div class="highlight highlight-source-python"><pre><span class="pl-c1">INSTALLED_APPS</span> <span class="pl-k">=</span> (
+    <span class="pl-c1">...</span>
     <span class="pl-s"><span class="pl-pds">'</span>philosophy_phrases<span class="pl-pds">'</span></span>,
 )</pre></div>
 </li>
-<li>Include the polls URLconf in your project urls.py like this:
-<code>python
-url(r'^philosophy', include('philosophy_phrases.urls', namespace='philosophy_phrase')),
-</code>
+<li>
+<p>Include the polls URLconf in your project urls.py like this:</p>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> django.conf.urls <span class="pl-k">import</span> include, url
+<span class="pl-c1">...</span>
+
+url(<span class="pl-sr"><span class="pl-k">r</span><span class="pl-pds">'</span><span class="pl-c1">^</span>philosophy<span class="pl-pds">'</span></span>, include(<span class="pl-s"><span class="pl-pds">'</span>philosophy_phrases.urls<span class="pl-pds">'</span></span>, <span class="pl-v">namespace</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>philosophy_phrase<span class="pl-pds">'</span></span>)),</pre></div>
 </li>
 <li>Run <code>python manage.py migrate</code> to create the philosophy_phrases models.</li>
 <li>
@@ -60,11 +68,11 @@ url(r'^philosophy', include('philosophy_phrases.urls', namespace='philosophy_phr
 <p>a) function get_phrase() will return a dictionary consist phrase and its author.</p>
 
 <div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> philosophy_phrases.phrase <span class="pl-k">import</span> get_phrase
-...
+<span class="pl-c1">...</span>
 
 <span class="pl-k">def</span> <span class="pl-en">Your_view_name</span>(<span class="pl-smi">request</span>):
     phrase <span class="pl-k">=</span> get_phrase()
-...</pre></div>
+<span class="pl-c1">...</span></pre></div>
 
 <p>and then insert it into your template:</p>
 
@@ -74,11 +82,11 @@ url(r'^philosophy', include('philosophy_phrases.urls', namespace='philosophy_phr
 <p>b) function get_phrase_in_popup() will return html code for popup.</p>
 
 <div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> philosophy_phrases.phrase <span class="pl-k">import</span> get_phrase_in_popup()
-...
+<span class="pl-c1">...</span>
 
 <span class="pl-k">def</span> <span class="pl-en">Your_view_name</span>(<span class="pl-smi">request</span>):
     phrase <span class="pl-k">=</span> get_phrase_in_popup()
-...</pre></div>
+<span class="pl-c1">...</span></pre></div>
 
 <p>and then insert it into your template (you have to use filter 'safe' for correct displaying html and js in your template):</p>
 
@@ -90,18 +98,26 @@ url(r'^philosophy', include('philosophy_phrases.urls', namespace='philosophy_phr
 to create your own phrase or import phrases by default (you'll need the Admin app enabled).</li>
 <li>For importing phrases visit <a href="http://127.0.0.1:8000/admin/philosophy_phrases/phrasesettings/">http://127.0.0.1:8000/admin/philosophy_phrases/phrasesettings/</a>, and click on 'Import default phrases'. If you click on it second time it will not create copy of phrases or authors, but will add phrases by default if there is no one of them.</li>
 </ol>
-      </section>
+        </article>
+      </div>
     </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/IvanStadnik" class="avatar"><img src="https://avatars3.githubusercontent.com/u/16342870?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/IvanStadnik">IvanStadnik</a> maintains <a href="https://github.com/IvanStadnik/Django-philosophy-phrases">Django-philosophy-phrases</a></p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Django-philosophy-phrases maintained by <a href="https://github.com/IvanStadnik">IvanStadnik</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
 
-    
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/IvanStadnik/Django-philosophy-phrases/tarball/master" class="tar">tar</a><a href="https://github.com/IvanStadnik/Django-philosophy-phrases/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
 
-  </body>
+  
+</body>
 </html>
