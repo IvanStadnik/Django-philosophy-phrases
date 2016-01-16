@@ -1,0 +1,9 @@
+include LICENSE
+include README.rst
+include philosophy_phrases/action_data.py
+include philosophy_phrases/apps.py
+include philosophy_phrases/forms.py
+include philosophy_phrases/phrases
+recursive-include philosophy_phrases/static *
+recursive-include philosophy_phrases/templates *
+recursive-include philosophy_phrases/locale *

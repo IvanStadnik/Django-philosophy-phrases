@@ -1,0 +1,48 @@
+.pp_custom_submite_row input {
+    float: left;
+}
+#pp_loading {
+    background-image: url("../images/loading.gif");
+    background-repeat: no-repeat;
+    background-size: 176px auto;
+    display: inline-block;
+    height: 19px;
+    left: 0;
+    margin-bottom: -12px;
+    margin-top: 8px;
+    width: 100%;
+}
+#pp_loading_result {
+    background-color: #79aec8;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    left: 0;
+    margin: 8px -5px -12px 5px;
+    padding: 5px 15px;
+    text-align: left;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+#pp_loading_result.success {
+    background-color: #59DB62;
+}
+#pp_loading_result.error {
+    background-color: #ff3d3d;
+}
+span.pp_mes_close {
+    background-image: url("../images/close.png");
+    background-size: cover;
+    bottom: 5px;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    width: 20px;
+}
+input[name="_continue"] {
+    display: none;
+}

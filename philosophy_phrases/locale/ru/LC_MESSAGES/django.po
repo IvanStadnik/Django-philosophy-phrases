@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-11 17:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: admin.py:48 admin.py:49 admin.py:50 models.py:32 models.py:43
+msgid "Author"
+msgstr "Автор"
+
+#: admin.py:51 admin.py:52 admin.py:53 admin.py:64 admin.py:72 admin.py:80
+#: admin.py:88 admin.py:96 models.py:73
+msgid "Phrase"
+msgstr "Фраза"
+
+#: admin.py:102
+msgid "Settings"
+msgstr "Настройки"
+
+#: apps.py:7
+msgid "Philosophy Phrases"
+msgstr "Философские фразы"
+
+#: forms.py:27 forms.py:34 forms.py:41
+msgid "This field is required."
+msgstr "Обязательное поле"
+
+#: models.py:9
+msgid "Name in English"
+msgstr "Имя на английском"
+
+#: models.py:10
+msgid "Name in Ukrainian"
+msgstr "Имя на украинском"
+
+#: models.py:11
+msgid "Name in Russian"
+msgstr "Имя на русском"
+
+#: models.py:12
+msgid "Biography in English"
+msgstr "Биография на английском"
+
+#: models.py:13
+msgid "Biography in Ukrainian"
+msgstr "Биография на украинском"
+
+#: models.py:14
+msgid "Biography in Russian"
+msgstr "Биография на русском"
+
+#: models.py:33
+msgid "Authors"
+msgstr "Авторы"
+
+#: models.py:40
+msgid "Phrase in English"
+msgstr "Фраза на английском"
+
+#: models.py:41
+msgid "Phrase in Ukrainian"
+msgstr "Фраза на Украинском"
+
+#: models.py:42
+msgid "Phrase in Russian"
+msgstr "Фраза на русском"
+
+#: models.py:45
+msgid "Published"
+msgstr "Опубликовано"
+
+#: models.py:46
+msgid "Draft"
+msgstr "Черновик"
+
+#: models.py:47
+msgid "Unpublished"
+msgstr "Не опубликовано"
+
+#: models.py:54 models.py:89
+msgid "Status"
+msgstr "Статус"
+
+#: models.py:74
+msgid "Phrases"
+msgstr "Фразы"
+
+#: models.py:86
+msgid "Enabled"
+msgstr "Вклюить"
+
+#: models.py:87
+msgid "Disabled"
+msgstr "Выключить"
+
+#: models.py:91
+msgid "English"
+msgstr "Английский"
+
+#: models.py:92
+msgid "Ukrainian"
+msgstr "Украинский"
+
+#: models.py:93
+msgid "Russian"
+msgstr "Русский"
+
+#: models.py:94
+msgid "Auto"
+msgstr "Авто"
+
+#: models.py:96
+msgid "Language of phrases"
+msgstr "Язык фраз"
+
+#: models.py:98
+msgid "Background color of window"
+msgstr "Цвет окна фразы"
+
+#: models.py:99
+msgid "Phrase text color"
+msgstr "Цвет текста фразы"
+
+#: models.py:100
+msgid "Author text color"
+msgstr "Цвет имени автора"
+
+#: models.py:114 models.py:115
+msgid "Phrases settings"
+msgstr "Настройки фраз"
+
+#: templates/admin/philosophy_phrases/base_site.html:3
+msgid "Django site admin"
+msgstr "Django Админ панель"
+
+#: templates/admin/philosophy_phrases/change_form.html:18
+#: templates/admin/philosophy_phrases/change_list.html:40
+#: templates/admin/philosophy_phrases/phrasesettings/app_index.html:9
+#: templates/admin/philosophy_phrases/phrasesettings/change_form.html:18
+#: templates/admin/philosophy_phrases/phrasesettings/change_list.html:40
+#: templates/admin/philosophy_phrases/phrasesettings/delete_confirmation.html:8
+#: templates/admin/philosophy_phrases/phrasesettings/object_history.html:6
+msgid "Home"
+msgstr "Главная"
+
+#: templates/admin/philosophy_phrases/change_form.html:21
+#: templates/admin/philosophy_phrases/phrasesettings/change_form.html:21
+msgid "Add"
+msgstr "Добавить"
+
+#: templates/admin/philosophy_phrases/change_form.html:33
+#: templates/admin/philosophy_phrases/phrasesettings/change_form.html:33
+#: templates/admin/philosophy_phrases/phrasesettings/object_history.html:10
+msgid "History"
+msgstr "История"
+
+#: templates/admin/philosophy_phrases/change_form.html:35
+#: templates/admin/philosophy_phrases/phrasesettings/change_form.html:35
+msgid "View on site"
+msgstr "Посмотреть на сайте"
+
+#: templates/admin/philosophy_phrases/change_form.html:47
+#: templates/admin/philosophy_phrases/change_list.html:67
+#: templates/admin/philosophy_phrases/phrasesettings/change_form.html:51
+#: templates/admin/philosophy_phrases/phrasesettings/change_list.html:67
+msgid "Please correct the error below."
+msgstr "Пожалуйста, исправте ошибку"
+
+#: templates/admin/philosophy_phrases/change_form.html:47
+#: templates/admin/philosophy_phrases/change_list.html:67
+#: templates/admin/philosophy_phrases/phrasesettings/change_form.html:51
+#: templates/admin/philosophy_phrases/phrasesettings/change_list.html:67
+msgid "Please correct the errors below."
+msgstr "Пожалуйста, исправте ошибки ниже"
+
+#: templates/admin/philosophy_phrases/change_list.html:58
+#: templates/admin/philosophy_phrases/phrasesettings/change_list.html:58
+#, python-format
+msgid "Add %(name)s"
+msgstr "Добавить %(name)s"
+
+#: templates/admin/philosophy_phrases/change_list.html:78
+#: templates/admin/philosophy_phrases/phrasesettings/change_list.html:78
+msgid "Filter"
+msgstr "Фильтрация"
+
+#: templates/admin/philosophy_phrases/phrasesettings/change_form.html:41
+msgid "Import default phrases"
+msgstr "Импорт фраз по умолчанию"
+
+#: templates/admin/philosophy_phrases/phrasesettings/delete_confirmation.html:12
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/admin/philosophy_phrases/phrasesettings/delete_confirmation.html:18
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: templates/admin/philosophy_phrases/phrasesettings/delete_confirmation.html:25
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: templates/admin/philosophy_phrases/phrasesettings/delete_confirmation.html:32
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: templates/admin/philosophy_phrases/phrasesettings/delete_confirmation.html:34
+msgid "Objects"
+msgstr "Объекты"
+
+#: templates/admin/philosophy_phrases/phrasesettings/delete_confirmation.html:41
+msgid "Yes, I'm sure"
+msgstr "Да, я уверен"
+
+#: templates/admin/philosophy_phrases/phrasesettings/delete_confirmation.html:42
+msgid "No, take me back"
+msgstr "Нет, вернуть обратно"
+
+#: templates/admin/philosophy_phrases/phrasesettings/object_history.html:22
+msgid "Date/time"
+msgstr "Дата/Время"
+
+#: templates/admin/philosophy_phrases/phrasesettings/object_history.html:23
+msgid "User"
+msgstr "Пользователь"
+
+#: templates/admin/philosophy_phrases/phrasesettings/object_history.html:24
+msgid "Action"
+msgstr "Действие"
+
+#: templates/admin/philosophy_phrases/phrasesettings/object_history.html:38
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: views.py:39
+msgid "Phrases imported successfully."
+msgstr "Фразы успешно импортированы"
+
+#: views.py:42
+msgid "Import of phrases failed."
+msgstr "Импорт фраз закончился неудачей."
