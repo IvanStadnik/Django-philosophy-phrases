@@ -20,7 +20,7 @@
   <body>
       <div id="header">
         <nav>
-          <li class="fork"><a href="https://github.com/IvanStadnik/Django-philosophy-phrases/tree/master">View On GitHub</a></li>
+          <li class="fork"><a href="https://github.com/IvanStadnik/Django-philosophy-phrases">View On GitHub</a></li>
           <li class="downloads"><a href="https://github.com/IvanStadnik/Django-philosophy-phrases/zipball/master">ZIP</a></li>
           <li class="downloads"><a href="https://github.com/IvanStadnik/Django-philosophy-phrases/tarball/master">TAR</a></li>
           <li class="title">DOWNLOADS</li>
@@ -81,13 +81,13 @@ url(<span class="pl-sr"><span class="pl-k">r</span><span class="pl-pds">'</span>
 &lt;/body&gt;
 </code></pre>
 
-<p>b) {% philosophy_phrase as phrase %}  - it would return adictionary with two variables:</p>
+<p>b) {% philosophy_phrase as phrase %}  - it would return a dictionary with two variables:</p>
 
 <pre><code>...
 {% load philosophy_extras %}
-{% philosophy_phrase as phrase %} 
+{% philosophy_phrase as phrase %}
         &lt;p&gt; {{ phrase.phrase }}&lt;/p&gt;      # text of the phrase
-    &lt;p&gt;{{ phrase.author }}&lt;/p&gt;       # author of the phrase
+        &lt;p&gt;{{ phrase.author }}&lt;/p&gt;       # author of the phrase
 ...
 </code></pre>
 
