@@ -20,7 +20,7 @@
   <body>
       <div id="header">
         <nav>
-          <li class="fork"><a href="https://github.com/IvanStadnik/Django-philosophy-phrases/tree/master">View On GitHub</a></li>
+          <li class="fork"><a href="https://github.com/IvanStadnik/Django-philosophy-phrases">View On GitHub</a></li>
           <li class="downloads"><a href="https://github.com/IvanStadnik/Django-philosophy-phrases/zipball/master">ZIP</a></li>
           <li class="downloads"><a href="https://github.com/IvanStadnik/Django-philosophy-phrases/tarball/master">TAR</a></li>
           <li class="title">DOWNLOADS</li>
@@ -66,20 +66,39 @@ url(<span class="pl-sr"><span class="pl-k">r</span><span class="pl-pds">'</span>
 <li>
 <p>To create the philosophy_phrases models run:</p>
 
-<div class="highlight highlight-source-python"><pre>python manage.py makemigrations philosophy_phrases
-python manage.py migrate</pre></div>
+<div class="highlight highlight-source-python"><pre>python manage.py migrate</pre></div>
 </li>
 <li>
-<p>Then you have to use one of the functions in your view like this:</p>
+<p>For adding phrases into your template you can use one of the template tags:
+a) {% phrase_in_popup %} - it will return a string with html.</p>
 
-<p>a) function get_phrase() will return a dictionary consist phrase and its author.</p>
+<pre><code>    ...
+&lt;body&gt;
+...
+{% load philosophy_extras %}
+{% phrase_in_popup %} 
+&lt;/body&gt;
 
-<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> philosophy_phrases.phrase <span class="pl-k">import</span> get_phrase
-<span class="pl-c1">...</span>
+b) {% philosophy_phrase as phrase %}  - it would return adictionary with two variables:
 
-<span class="pl-k">def</span> <span class="pl-en">Your_view_name</span>(<span class="pl-smi">request</span>):
-    phrase <span class="pl-k">=</span> get_phrase()
-<span class="pl-c1">...</span></pre></div>
+...
+{% load philosophy_extras %}
+{% philosophy_phrase as phrase %} 
+        &lt;p&gt; {{ phrase.phrase }}&lt;/p&gt;      # text of the phrase
+    &lt;p&gt;{{ phrase.author }}&lt;/p&gt;       # author of the phrase
+...
+
+Or you can use one of the functions in your view like this:
+
+a) function get_phrase() will return a dictionary consist phrase and its author.
+```python
+from philosophy_phrases.phrase import get_phrase
+...
+
+def Your_view_name(request):
+    phrase = get_phrase()
+...
+</code></pre>
 
 <p>and then insert it into your template:</p>
 
@@ -99,7 +118,8 @@ python manage.py migrate</pre></div>
 
 <pre><code>{{ phrase|safe }}
 </code></pre>
-</li>
+
+<ol>
 <li>If there is no any phrase in your db, functions get_phrase_in_popup() and get_phrase() will return an empty string.</li>
 <li>Start the development server and visit <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>
 to create your own phrase or import phrases by default (you'll need the Admin app enabled).</li>
@@ -108,6 +128,8 @@ to create your own phrase or import phrases by default (you'll need the Admin ap
 </li>
 <li>You can click on 'view on site' on the page of editing a phrase, and you will see how it would look on example site.
 <img src="images/example.png" alt="example">
+</li>
+</ol>
 </li>
 </ol>
       </section>
