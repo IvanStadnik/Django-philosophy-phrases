@@ -90,49 +90,38 @@ url(<span class="pl-sr"><span class="pl-k">r</span><span class="pl-pds">'</span>
     &lt;p&gt;{{ phrase.author }}&lt;/p&gt;       # author of the phrase
 ...
 </code></pre>
-</li>
-</ol>
 
 <p>Or you can use one of the functions in your view like this:</p>
 
-<pre><code>a) function get_phrase() will return a dictionary consist phrase and its author.
+<p>a) function get_phrase() will return a dictionary consist phrase and its author.</p>
 
-```python
-from philosophy_phrases.phrase import get_phrase
-...
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> philosophy_phrases.phrase <span class="pl-k">import</span> get_phrase
+<span class="pl-c1">...</span>
 
-def Your_view_name(request):
-    phrase = get_phrase()
-...
-```
+<span class="pl-k">def</span> <span class="pl-en">Your_view_name</span>(<span class="pl-smi">request</span>):
+    phrase <span class="pl-k">=</span> get_phrase()
+<span class="pl-c1">...</span></pre></div>
 
-and then insert it into your template:
+<p>and then insert it into your template:</p>
 
-```python
-{{ phrase.phrase }}
-{{ phrase.author }}
-```
+<div class="highlight highlight-source-python"><pre>{{ phrase.phrase }}
+{{ phrase.author }}</pre></div>
 
-b) function get_phrase_in_popup() will return html code for popup.
+<p>b) function get_phrase_in_popup() will return html code for popup.</p>
 
-```python
-from philosophy_phrases.phrase import get_phrase_in_popup()
-...
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> philosophy_phrases.phrase <span class="pl-k">import</span> get_phrase_in_popup()
+<span class="pl-c1">...</span>
 
-def Your_view_name(request):
-    phrase = get_phrase_in_popup()
-...
-```
+<span class="pl-k">def</span> <span class="pl-en">Your_view_name</span>(<span class="pl-smi">request</span>):
+    phrase <span class="pl-k">=</span> get_phrase_in_popup()
+<span class="pl-c1">...</span></pre></div>
 
-and then insert it into your template (you have to use filter 'safe' for correct displaying html and js in your template):
+<p>and then insert it into your template (you have to use filter 'safe' for correct displaying html and js in your template):</p>
 
-```
-{{ phrase|safe }}
-```
+<pre><code>{{ phrase|safe }}
 </code></pre>
-
-<ol>
-<li>If there is no any phrase in your db, functions get_phrase_in_popup() and get_phrase() will return an empty string.</li>
+</li>
+<li><p>If there is no any phrase in your db, functions get_phrase_in_popup() and get_phrase() will return an empty string.</p></li>
 <li>Start the development server and visit <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>
 to create your own phrase or import phrases by default (you'll need the Admin app enabled).</li>
 <li>For importing phrases visit <a href="http://127.0.0.1:8000/admin/philosophy_phrases/phrasesettings/">http://127.0.0.1:8000/admin/philosophy_phrases/phrasesettings/</a>, and click on 'Import default phrases'. If you click on it second time it will not create copy of phrases or authors, but will add phrases by default if there is no any of them.
