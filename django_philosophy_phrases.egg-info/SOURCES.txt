@@ -21,6 +21,10 @@ philosophy_phrases/locale/ru/LC_MESSAGES/django.mo
 philosophy_phrases/locale/ru/LC_MESSAGES/django.po
 philosophy_phrases/locale/uk/LC_MESSAGES/django.mo
 philosophy_phrases/locale/uk/LC_MESSAGES/django.po
+philosophy_phrases/migrations/0001_initial.py
+philosophy_phrases/migrations/__init__.py
+philosophy_phrases/migrations/__pycache__/0001_initial.cpython-34.pyc
+philosophy_phrases/migrations/__pycache__/__init__.cpython-34.pyc
 philosophy_phrases/static/philosophy_phrases/bootstrap.min.css
 philosophy_phrases/static/philosophy_phrases/style.css
 philosophy_phrases/static/philosophy_phrases/admin_styles/style.css
@@ -31,3 +35,8 @@ philosophy_phrases/static/philosophy_phrases/js/pp_admin.js
 philosophy_phrases/static/philosophy_phrases/js/script.js
 philosophy_phrases/templates/admin/philosophy_phrases/phrasesettings/change_form.html
 philosophy_phrases/templates/philosophy_phrases/details.html
+philosophy_phrases/templates/philosophy_phrases/phrase_popup.html
+philosophy_phrases/templatetags/__init__.py
+philosophy_phrases/templatetags/philosophy_extras.py
+philosophy_phrases/templatetags/__pycache__/__init__.cpython-34.pyc
+philosophy_phrases/templatetags/__pycache__/philosophy_extras.cpython-34.pyc

@@ -29,11 +29,26 @@ Description: =====
         
             url(r'^philosophy', include('philosophy_phrases.urls', namespace='philosophy_phrase')),
         
-        3. Run 'python manage.py makemigrations philosophy_phrases' and 'python manage.py migrate' to create the philosophy_phrases models.
+        3. Run 'python manage.py migrate' to create the philosophy_phrases models.
         
-        4. Then you have to use one of the functions in your view like this:
+        4. For adding phrases into your template you can use one of the template tags:
+            1) {% phrase_in_popup %} - it will return a string with html.
+        	...
+        	<body>
+        	...
+        	{% load philosophy_extras %}
+        	{% phrase_in_popup %} 
+        	</body>
+            2) {% philosophy_phrase as phrase %}  - it would return adictionary with two variables:
+        	...
+        	{% load philosophy_extras %}
+        	{% philosophy_phrase as phrase %} 
+        	    <p> {{ phrase.phrase }}</p>      # text of the phrase
+        	    <p>{{ phrase.author }}</p>       # author of the phrase
+        	...
+        Or you can use one of the functions in your view like this:
         
-            a) function get_phrase() will return a dictionary consist phrase and its author.
+            1) function get_phrase() will return a dictionary consist phrase and its author.
         
             from philosophy_phrases.phrase import get_phrase
             ...
@@ -47,7 +62,7 @@ Description: =====
             {{ phrase.phrase }}
             {{ phrase.author }}
             
-            b) function get_phrase_in_popup() will return html code for popup.
+            2) function get_phrase_in_popup() will return html code for popup.
         
             from philosophy_phrases.phrase import get_phrase_in_popup()
             ...

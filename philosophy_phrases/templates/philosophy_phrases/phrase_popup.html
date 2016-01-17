@@ -1,0 +1,9 @@
+<div id="pp_fixed_block" style="background-color: {{ phrase.bg_color }}">
+    <div id="dialog_close"></div>
+    <div id="pp_fixed_phrase" style="color: {{ phrase.phrase_color }}">{{ phrase.phrase }}
+        <div id="pp_fixed_author" style="color: {{ phrase.author_color }}">{{ phrase.author }}</div>
+    </div>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'philosophy_phrases/style.css' %}">
+    <script type="text/javascript" src="{% static 'philosophy_phrases/js/script.js' %}"></script>
+</div>

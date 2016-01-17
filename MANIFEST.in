@@ -7,3 +7,5 @@ include philosophy_phrases/phrases
 recursive-include philosophy_phrases/static *
 recursive-include philosophy_phrases/templates *
 recursive-include philosophy_phrases/locale *
+recursive-include philosophy_phrases/migrations *
+recursive-include philosophy_phrases/templatetags *
