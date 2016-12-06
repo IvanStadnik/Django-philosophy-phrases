@@ -34,9 +34,9 @@ class Migration(migrations.Migration):
             name='Phrases',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('phrase_en', models.TextField(blank=True, null=True, unique=True, verbose_name='Phrase in English')),
-                ('phrase_uk', models.TextField(blank=True, null=True, unique=True, verbose_name='Phrase in Ukrainian')),
-                ('phrase_ru', models.TextField(blank=True, null=True, unique=True, verbose_name='Phrase in Russian')),
+                ('phrase_en', models.TextField(blank=True, null=True, verbose_name='Phrase in English')),
+                ('phrase_uk', models.TextField(blank=True, null=True, verbose_name='Phrase in Ukrainian')),
+                ('phrase_ru', models.TextField(blank=True, null=True, verbose_name='Phrase in Russian')),
                 ('showed', models.BooleanField(default=False)),
                 ('phrase_status', models.CharField(choices=[('published', 'Published'), ('draft', 'Draft'), ('unpublished', 'Unpublished')], default='published', max_length=11, verbose_name='Status')),
                 ('pub_date', models.DateTimeField(auto_now_add=True, verbose_name='Date published')),
