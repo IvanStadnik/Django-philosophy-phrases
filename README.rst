@@ -25,7 +25,7 @@ Quick start
 
 4. For adding phrases into your template you can use one of the template tags:
 
-	    1) {% phrase_in_popup %} - it will return a string with html.
+	a. {% phrase_in_popup %} - it will return a string with html.
 
 		...
 		<body>
@@ -34,7 +34,7 @@ Quick start
 		{% phrase_in_popup %} 
 		</body>
 
-	    2) {% philosophy_phrase as phrase %}  - it would return adictionary with two variables:
+	b. {% philosophy_phrase as phrase %}  - it would return adictionary with two variables:
 
 		...
 		{% load philosophy_extras %}
@@ -43,34 +43,34 @@ Quick start
 		    <p>{{ phrase.author }}</p>       # author of the phrase
 		...
 
-    Or you can use one of the functions in your view like this:
+Or you can use one of the functions in your view like this:
 
-	    1) function get_phrase() will return a dictionary consist phrase and its author.
+	a. function get_phrase() will return a dictionary consist phrase and its author.
 
-	    from philosophy_phrases.phrase import get_phrase
-	    ...
+		from philosophy_phrases.phrase import get_phrase
+		    ...
 
-	    def Your_view_name(request):
-		phrase = get_phrase()
+		    def Your_view_name(request):
+			phrase = get_phrase()
+			...
+
+		    and then insert it into your template:
+
+		    {{ phrase.phrase }}
+		    {{ phrase.author }}
+	    
+	b. function get_phrase_in_popup() will return html code for popup.
+
+		from philosophy_phrases.phrase import get_phrase_in_popup()
 		...
 
-	    and then insert it into your template:
-
-	    {{ phrase.phrase }}
-	    {{ phrase.author }}
-	    
-	    2) function get_phrase_in_popup() will return html code for popup.
-
-	    from philosophy_phrases.phrase import get_phrase_in_popup()
-	    ...
-
-	    def Your_view_name(request):
+		def Your_view_name(request):
 		phrase = get_phrase_in_popup()
 		...
-	    
-	    and then insert it into your template (you have to use filter 'safe' for correct displaying html and js in your template):
 
-	    {{ phrase|safe }}
+		and then insert it into your template (you have to use filter 'safe' for correct displaying html and js in your template):
+
+		{{ phrase|safe }}
 
 5. If there is no any phrase in your db, functions get_phrase_in_popup() and get_phrase() will return an empty string.
 
