@@ -25,7 +25,7 @@ Quick start
 
 4. For adding phrases into your template you can use one of the template tags:
 
-	a. {% phrase_in_popup %} - it will return a string with html.
+	1. {% phrase_in_popup %} - it will return a string with html.
 
 		...
 		<body>
@@ -34,7 +34,7 @@ Quick start
 		{% phrase_in_popup %} 
 		</body>
 
-	b. {% philosophy_phrase as phrase %}  - it would return adictionary with two variables:
+	2. {% philosophy_phrase as phrase %}  - it would return adictionary with two variables:
 
 		...
 		{% load philosophy_extras %}
@@ -45,7 +45,7 @@ Quick start
 
 Or you can use one of the functions in your view like this:
 
-	a. function get_phrase() will return a dictionary consist phrase and its author.
+	1. function get_phrase() will return a dictionary consist phrase and its author.
 
 		from philosophy_phrases.phrase import get_phrase
 		    ...
@@ -59,7 +59,7 @@ Or you can use one of the functions in your view like this:
 		    {{ phrase.phrase }}
 		    {{ phrase.author }}
 	    
-	b. function get_phrase_in_popup() will return html code for popup.
+	2. function get_phrase_in_popup() will return html code for popup.
 
 		from philosophy_phrases.phrase import get_phrase_in_popup()
 		...
